@@ -41,7 +41,8 @@ Project:.
 
 1. 下载zip文件，上传到Overleaf，创建一个新的项目
 2. 在`main.tex`中修改实习名称、姓名等基本信息
-3. 开始正文编辑：
+3. 切换编译器为`XeLaTex`，默认为`pdfLatex`
+4. 开始正文编辑：
    - 在`content/`文件夹中编辑正文
    - 将图片上传到`figure/`文件夹中
    - 将参考文献加入`refs.bib`文件中
