@@ -157,6 +157,34 @@
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{4}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 添加插入代码的函数
+
+\usepackage{minted}
+\usepackage{mdframed}
+
+\newenvironment{mintedframe}{%
+    \begin{mdframed}[
+        linewidth=0.5pt, % 外边框的线宽
+        roundcorner=3pt, % 边框的圆角程度
+        innerleftmargin=6pt, % 代码与边框的距离
+        innerrightmargin=6pt, % 代码与边框的距离
+        innertopmargin=6pt, % 代码与边框的距离
+        innerbottommargin=6pt, % 代码与边框的距离
+        
+    ]
+}{%
+    \end{mdframed}
+}
+
+% command: addcode
+% param 1: code type
+% param 2: code filename
+\newcommand{\addcode}[2]{
+    \begin{mintedframe}
+    \inputminted[linenos, breaklines, fontsize=\small]{#1}{#2}
+    \end{mintedframe}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \endinput % End Of File!

@@ -4,6 +4,10 @@
 
 根据武汉大学遥感信息工程学院课程实习`Word`模板排版而成的`Latex`模板。建议使用[`Overleaf`]((https://cn.overleaf.com/))进行编译和修改，不保证本地环境可以配置成功……
 
+## 更新日志
+
+- 2024/05/22 添加`addcode`函数，支持插入代码块
+
 ## 测试环境
 
 编译环境：[Overleaf](https://cn.overleaf.com/)
@@ -26,8 +30,11 @@ Project:.
 ├─content              # 放置正文的文件夹
 │      description.tex
 │
-└─figure               # 放置图片的文件夹
-        DEM拼接精度.png
+├─figure               # 放置图片的文件夹
+│       DEM拼接精度.png
+│
+└─code                 # 放置代码文件的文件夹
+        test.py
 ```
 
 ## 使用说明
@@ -38,3 +45,4 @@ Project:.
    - 在`content/`文件夹中编辑正文
    - 将图片上传到`figure/`文件夹中
    - 将参考文献加入`refs.bib`文件中
+   - 将代码文件加入`code/`文件夹中
