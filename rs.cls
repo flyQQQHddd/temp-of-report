@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \RequirePackage{expl3 , xparse , l3keys2e}
-\ProvidesClass{rs}[2024/09/18 v2.6 Standard LaTeX Template for CUMCM]
+\ProvidesClass{rs}[2024/09/18 v3 Standard LaTeX Template for RS]
 
 \LoadClass[a4paper,oneside]{article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,11 +51,8 @@
 
 % 消除预览PDF时超链接的红色边框
 \hypersetup{pdfencoding=auto}
-\ifprint
 \hypersetup{hidelinks}
-\else
-\hypersetup{citecolor=magenta,linkcolor=blue}
-\fi
+
 
 % 页边距
 \RequirePackage[
