@@ -86,8 +86,15 @@
 Q_j=v\frac{S_j-S^*}{S^--S^*}+(1-v)\frac{R_j-R^*}{R^--R^*}，i=1,2,\cdots,m
 \end{equation}
 
-
 \section{插入代码块}
 
 \addcode{python}{code/test.py}
 
+\section{使用枚举}
+
+\begin{enumerate}[itemsep=2pt,topsep=0pt,parsep=0pt]
+    \item 设置一个全为0的空矩阵，该矩阵的范围要比测区大，称其为“画板”；
+    \item 根据观测站编码计算观测站坐标，按照坐标将对应的足迹矩阵偏移到指定位置，并将值记录到“画板”上，每个足迹矩阵对应“画板”上的一个波段；
+    \item 对上述5个波段按照取最大值原则进行叠置，得到只1个波段的“画板”，即为5个观测站共同的观测能力矩阵；
+    \item 将上述观测能力矩阵与甲烷通量场矩阵进行叠加，计算哈达玛积并将元素求和，得到最终的个体适应值。
+\end{enumerate}

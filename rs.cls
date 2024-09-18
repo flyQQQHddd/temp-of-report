@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \RequirePackage{expl3 , xparse , l3keys2e}
-\ProvidesClass{rs}[2017/09/16 v2.6 Standard LaTeX Template for CUMCM]
+\ProvidesClass{rs}[2024/09/18 v2.6 Standard LaTeX Template for CUMCM]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions
@@ -46,7 +46,7 @@
 \RequirePackage{seqsplit, caption} %for table spacing to second row
 \RequirePackage{siunitx} %for table spacing to second row
 \RequirePackage{threeparttable} %to add footnote below table
-
+\RequirePackage{enumitem} % 设置 enumerate 环境
 
 \RequirePackage{booktabs}
 
@@ -149,6 +149,12 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 设置中文序号
+\RequirePackage{zhnumber} % change section number to chinese
+\renewcommand\thesection{\zhnum{section}、}
+\renewcommand \thesubsection {\arabic{section}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 目录页
 \RequirePackage{tocloft} %目录设置
 \ctexset{contentsname={目\qquad 录}}
@@ -156,6 +162,8 @@
 
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{4}
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % 目录后一行连续的点
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 添加插入代码的函数

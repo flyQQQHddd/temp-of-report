@@ -6,7 +6,7 @@
 \Ccollege{遥感信息工程学院}
 \Cclass{21XX}
 \CstudentNum{2021302131XXX}
-\Cname{小Q}
+\Cname{QHD}
 \Cplace{宿舍}
 \Cteacher{CSDN，ChatGPT}
 \Cdate{2024年5月22日}
@@ -21,8 +21,10 @@
 
 %%%========= 目录 =========%%%
 
-\tableofcontents
+\centering{\tableofcontents}
+\thispagestyle{empty} % 目录页没有页脚
 \newpage
+\setcounter{page}{1} % 刷新页数，从正文开始计数
 
 %%%========= 正文 =========%%%
 
@@ -35,7 +37,9 @@
 % >>> \input{content/text3}
 
 %%%========= 参考文献 =========%%%
+% 不想要参考文献可以直接把这部分注释掉
 
+\phantomsection\addcontentsline{toc}{section}{参考文献}\tolerance=500 %将参考文献放进目录
 \cleardoublepage\phantomsection
 \bibliographystyle{gbt7714-numerical}
 \bibliography{refs.bib}
