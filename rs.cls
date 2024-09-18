@@ -2,13 +2,6 @@
 \RequirePackage{expl3 , xparse , l3keys2e}
 \ProvidesClass{rs}[2024/09/18 v2.6 Standard LaTeX Template for CUMCM]
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
-\ProcessOptions
-\newif\ifprint\printfalse
-\DeclareOption{forprint}{\printtrue}
-\ProcessOptions
-
-
 \LoadClass[a4paper,oneside]{article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage[UTF8]{ctex}
@@ -149,7 +142,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 设置中文序号
+% 设置章节序号为中文
 \RequirePackage{zhnumber} % change section number to chinese
 \renewcommand\thesection{\zhnum{section}、}
 \renewcommand \thesubsection {\arabic{section}}
@@ -158,8 +151,6 @@
 % 目录页
 \RequirePackage{tocloft} %目录设置
 \ctexset{contentsname={目\qquad 录}}
-\RequirePackage{tocloft}
-
 \setcounter{tocdepth}{2}
 \setcounter{secnumdepth}{4}
 
@@ -168,8 +159,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 添加插入代码的函数
 
-\usepackage{minted}
-\usepackage{mdframed}
+\RequirePackage{minted}
+\RequirePackage{mdframed}
 
 \newenvironment{mintedframe}{%
     \begin{mdframed}[
