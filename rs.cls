@@ -142,7 +142,7 @@
 % 设置章节序号为中文
 \RequirePackage{zhnumber} % change section number to chinese
 \renewcommand\thesection{\zhnum{section}、}
-\renewcommand \thesubsection {\arabic{section}}
+\renewcommand\thesubsection{\arabic{subsection}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 目录页
